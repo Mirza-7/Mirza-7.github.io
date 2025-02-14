@@ -1,26 +1,6 @@
 // Initialize AOS
 AOS.init({ offset: 0 });
 
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-let isDark = true;
-
-themeToggle.addEventListener('click', () => {
-  isDark = !isDark;
-  if (!isDark) {
-    // Light mode: keep neon-blue, switch background to white & text to black
-    document.documentElement.style.setProperty('--neon-blue', '#00bfff');
-    document.documentElement.style.setProperty('--background-color', '#fff');
-    document.documentElement.style.setProperty('--text-color', '#000');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-  } else {
-    // Dark mode: black background, white text, neon-blue
-    document.documentElement.style.setProperty('--neon-blue', '#00bfff');
-    document.documentElement.style.setProperty('--background-color', '#000');
-    document.documentElement.style.setProperty('--text-color', '#fff');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-  }
-});
 
 // Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
