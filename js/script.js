@@ -1,6 +1,29 @@
 // Initialize AOS
 AOS.init({ offset: 0 });
 
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+let isDark = true;
+
+
+themeToggle.addEventListener('click', () => {
+ isDark = !isDark;
+ if (!isDark) {
+   // Light mode
+   document.documentElement.style.setProperty('--neon-blue', '#00bfff');
+   document.documentElement.style.setProperty('--background-color', '#fff');
+   document.documentElement.style.setProperty('--text-color', '#000');
+   themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+ } else {
+   // Dark mode
+   document.documentElement.style.setProperty('--neon-blue', '#00bfff');
+   document.documentElement.style.setProperty('--background-color', '#000');
+   document.documentElement.style.setProperty('--text-color', '#fff');
+   themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+ }
+});
+
+
 
 // Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
@@ -10,7 +33,7 @@ hamburger.addEventListener('click', () => {
   linksContainer.classList.toggle('open');
 });
 
-// Typewriter Effect (Single phrase repeated)
+// Typewriter Effect 
 const texts = [
   "Aspiring Software Developer",
 ];
@@ -45,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   type();
 });
 
-// Prevent URL hash changes (optional)
+// Prevent URL hash changes
 history.replaceState(null, null, " ");
 
 // SMOOTH SCROLLING FOR NAVIGATION LINKS
@@ -57,7 +80,7 @@ document.querySelectorAll('.links a').forEach(link => {
       
       if (targetSection) {
         window.scrollTo({
-          top: targetSection.offsetTop - 80, // Adjust for fixed navbar
+          top: targetSection.offsetTop - 80, 
           behavior: 'smooth'
         });
       }

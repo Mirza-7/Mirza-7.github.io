@@ -1,16 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+/* Root Variables */
+:root {
+ --neon-blue: #00bfff;
+ --background-color: #000;
+ --text-color: #fff;
+}
+
+
+* {
+ padding: 0;
+ margin: 0;
+ font-family: 'Poppins', sans-serif;
+ box-sizing: border-box;
+}
+
+
+html {
+ scroll-behavior: smooth; 
+}
+
+
+body {
+ background-color: var(--background-color);
+ color: var(--text-color);
+ overflow-x: hidden;
+}
+
+
+/* NAVIGATION */
+.nav-container {
+ width: 100%;
+ height: 10vh;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 1.5rem;
+ position: fixed;
+ top: 0;
+ z-index: 1000;
+ background: rgba(0, 0, 0, 0.8);
+}
+
+
+.logo {
+ color: white;
+ font-size: 1.8rem;
+ font-weight: bold;
+}
+
+
+/* Neon style on elements */
+.logo span,
+.content h1 span,
+.content .typewriter-text,
+.social-links i,
+.content button,
+.project-links a {
+ color: var(--neon-blue);
+ text-shadow: 0 0 10px var(--neon-blue);
+}
+
+
+/* HAMBURGER */
+.hamburger {
+ display: none;
+ font-size: 1.8rem;
+ color: var(--text-color);
+ cursor: pointer;
+}
+
+
+.links-container {
+ display: flex;
+ align-items: center;
+}
+
+
+.links {
+ display: flex;
+ gap: 2rem;
+}
+
+
+.link a {
+ color: white;
+ text-decoration: none;
+ position: relative;
+ font-size: 1rem;
+}
+
+
+.link a:hover {
+ color: var(--neon-blue);
+}
+
+
+/* SECTIONS */
+.section {
+ min-height: 100vh;
+ width: 100%;
+ padding: 0 50px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 10vh; 
+}
+
+
+/* THEME TOGGLE */
+.theme-toggle {
+ position: fixed;
+ bottom: 2rem;
+ right: 2rem;
+ background: rgba(255, 255, 255, 0.1);
+ border: 2px solid var(--neon-blue);
+ color: var(--neon-blue);
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ display: grid;
+ place-items: center;
+ z-index: 1500;
+}
+
+
 /* HOME SECTION */
 .main-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Move items to the left */
+    justify-content: flex-start; 
     gap: 3rem;
     width: 80%;
-    max-width: 1200px; /* optional max for large screens */
-    margin: 0 auto;    /* center the container in the page */
+    max-width: 1200px; 
+    margin: 0 auto;    
   }
   
   .main-container .image {
-    width: 350px;    /* bigger image size */
+    width: 350px;    
     height: 350px;
     border-radius: 50%;
     overflow: hidden;
@@ -39,13 +170,34 @@
 
   }
 
-  /* PROFILE PICTURE STYLING */
+  /* Social Icons under typewriter */
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+   }
+   
+   
+   .social-icons a {
+    color: var(--neon-blue); 
+    font-size: 2rem;        
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    text-shadow: 0 0 10px var(--neon-blue);
+   }
+   
+   
+   .social-icons a:hover {
+    transform: scale(1.2);
+   }
+   
 .main-container .image {
-    width: 350px;    /* bigger image size */
+    width: 350px;    
     height: 350px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 30px var(--neon-blue); /* Neon blue glow effect */
+    box-shadow: 0 0 30px var(--neon-blue); 
     transition: transform 0.3s ease;
   }
   
@@ -56,54 +208,268 @@
   }
   
   .main-container .image:hover {
-    transform: scale(1.05); /* Slight pop-out effect on hover */
+    transform: scale(1.05); 
   }
 
-  /* NAVIGATION */
-.nav-container {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  .logo {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  .links {
+  .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+   }
+   
+   
+   .typewriter {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+   }
+   
+   
+   /*  Icons under typewriter */
+   .social-icons {
+    margin-top: 1rem;
     display: flex;
     gap: 2rem;
-  }
-  
-  .link a {
-    color: white;
+    align-items: center;
+   }
+   
+   
+   .social-icons a {
+    color: var(--neon-blue); 
+    font-size: 2rem;       
+    transition: transform 0.2s ease;
     text-decoration: none;
-    font-size: 1rem;
-  }
+    text-shadow: 0 0 10px var(--neon-blue);
+   }
+   
+   
+   .social-icons a:hover {
+    transform: scale(1.2);
+   }
+   
+   
+   /* ABOUT */
+   .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+   }
+   
+   
+   .about-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--neon-blue);
+   }
+   
+   
+   .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+   }
+   
+   
+   .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+   }
+   
+   
+   /* SKILLS */
+   .skills-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+   }
+   
+   
+ 
+   .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-items: center; 
+   }
+   
+   
+   .skill-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 180px; 
+   }
+   
+   
+   .skill-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+   }
+   
+   
+   .skill-item:hover {
+    transform: translateY(-10px);
+   }
+   
+   
+   /* PROJECTS */
+   .projects-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+   }
+   
+   
   
-  .link a:hover {
-    color: var(--neon-blue);
-  }
+   .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center; 
+   }
+   
+   
+   .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 280px; 
+   }
+   
+   
+   .project-card:hover {
+    transform: translateY(-10px);
+   }
+   
+   
+   .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+   }
+   
+   
+   .project-info {
+    padding: 1.5rem;
+   }
+   
+   
+   .project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+   }
+   
+   
+   /* EXPERIENCE */
+   .experience-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+   }
+   
+   
+   
+   .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+   }
+   
+   
   
-  /* HAMBURGER MENU (For Mobile) */
-  .hamburger {
-    display: none;
-    font-size: 1.8rem;
+   .experience-grid.single {
+    display: block; 
+   }
+   
+   
+   .experience-grid.single .experience-card {
+    width: 80%;       
+    max-width: 800px; 
+    margin: 0 auto;   
+   }
+   
+   
+   .experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+   }
+   
+   
+   .experience-card:hover {
+    transform: translateY(-10px);
+   }
+   
+   
+   .experience-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+   }
+   
+   
+   /* CONTACT */
+   .contact-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+   }
+   
+   
+   .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+   }
+   
+   
+   .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+   }
+   
+   
+   .contact-form input,
+   .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--neon-blue);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--text-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+   }
+   
+   
+   .contact-form button {
+    border: 2px solid var(--neon-blue);
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: var(--neon-blue);
+    border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
+    align-self: flex-end;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+   }
+   
+   
+   .contact-form button:hover {
+    background-color: var(--neon-blue);
+    color: #000;
+   }
+   
+   
+   /* RESPONSIVE NAV (HAMBURGER) */
+   @media (max-width: 768px) {
     .hamburger {
       display: block;
     }
@@ -121,248 +487,52 @@
       align-items: center;
     }
     .links-container.open {
-      max-height: 300px; /* Enough to show the nav items */
+      max-height: 300px;
     }
     .links {
       flex-direction: column;
       gap: 1rem;
       padding: 1rem 0;
     }
-  }
-  /* ABOUT SECTION */
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .about-image img {
-    width: 400px;  /* Bigger image */
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 20px var(--neon-blue);
-  }
-  
-  .about-text {
-    max-width: 600px;
-  }
-  
-  .about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-text p {
-    font-size: 1.2rem; /* Bigger text */
-    line-height: 1.6;
-  }
-  
-  /* SKILLS SECTION */
-.skills-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  /* Skills Grid: 2 columns x 3 rows */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Two columns */
-    gap: 2rem;
-    justify-items: center; /* Center each item */
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Individual Skill Item */
-  .skill-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 180px;
-  }
-  
-  .skill-item i {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .skill-item:hover {
-    transform: translateY(-10px);
-  }
-
-  /* PROJECTS SECTION */
-.projects-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  /* Projects Grid: 3 projects side by side */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Three equal columns */
-    gap: 2rem;
-    justify-items: center; /* Center each item */
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  /* Individual Project Card */
-  .project-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    padding-bottom: 1rem;
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .project-info {
-    padding: 1rem;
-  }
-  
-  .project-links {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .project-links a {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-    transition: color 0.3s ease;
-  }
-  
-  .project-links a:hover {
-    color: white;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+   }
+   
+   
+   /* On medium screens, reduce columns to fit better */
+   @media (max-width: 992px) {
     .projects-grid {
-      grid-template-columns: 1fr; /* One column for small screens */
+      grid-template-columns: 1fr 1fr;
     }
-  }
-  
-/* EXPERIENCE SECTION */
-.experience-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  /* Experience Grid: Centered Wide Rectangle */
-  .experience-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 2rem 0;
-  }
-  
-  /* Experience Card */
-  .experience-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 2rem;
-    max-width: 800px; /* Wider for a clean look */
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 0 20px var(--neon-blue);
-  }
-  
-  .experience-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .experience-card p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-    
-/* CONTACT SECTION */
-.contact-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  /* Contact Form */
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  /* Name Fields */
-  .form-row {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .form-row input {
-    flex: 1;
-  }
-  
-  /* Input & Textarea */
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid var(--neon-blue);
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-color: white;
-    outline: none;
-  }
-  
-  /* Send Button */
-  .contact-form button {
-    background: var(--neon-blue);
-    color: black;
-    border: none;
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background: white;
-    color: black;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    .experience-grid {
+      grid-template-columns: 1fr;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+   }
+   
+   
+   @media (max-width: 768px) {
+    .section {
+      padding: 0 20px;
+      margin-top: 10vh;
+    }
+   
+   
+    .main-container {
+      flex-direction: column;
+      width: 90%;
+    }
+   
+   
+    .about-container {
+      flex-direction: column;
+    }
+   
+   
     .form-row {
       flex-direction: column;
     }
-  }
+   }
+   
     
   
