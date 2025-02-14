@@ -47,3 +47,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Prevent URL hash changes (optional)
 history.replaceState(null, null, " ");
+
+// SMOOTH SCROLLING FOR NAVIGATION LINKS
+document.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 80, // Adjust for fixed navbar
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
