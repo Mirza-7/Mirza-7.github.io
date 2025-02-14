@@ -129,6 +129,38 @@
       padding: 1rem 0;
     }
   }
+  /* ABOUT SECTION */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-image img {
+    width: 400px;  /* Bigger image */
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--neon-blue);
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem; /* Bigger text */
+    line-height: 1.6;
+  }
   
   
   
