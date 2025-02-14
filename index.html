@@ -1,66 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirza Asdaf - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+
+  <title>Mirza Asdaf Portfolio</title>
 </head>
 <body>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Mirza <span>Asdaf</span>
+      </div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about" class="hero">
-        <div class="hero-text">
-            <h1>Mirza Asdaf</h1>
-            <p>Computer Science Student</p>
+      <div class="links-container">
+        <div class="links">
+          <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <a href="#home">Home</a>
+          </div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+            <a href="#about">About</a>
+          </div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+            <a href="#skills">Skills</a>
+          </div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+            <a href="#projects">Projects</a>
+          </div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+            <a href="#experience">Experience</a>
+          </div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+            <a href="#contact">Contact</a>
+          </div>
         </div>
-        <div class="hero-image">
-            <img src="images/profilepic.JPG" alt="Mirza Asdaf">
+      </div>
+    </div>
+  </nav>
+
+ 
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section">
+    <div class="main-container">
+      <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+        <img src="images/profilepic.JPG" alt="Profile Picture" />
+      </div>
+      <div class="content">
+        <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">
+          Hey, I'm <span>Mirza Asdaf</span>
+        </h1>
+        <div
+          class="typewriter"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-delay="900"
+        >
+          I'm an <span class="typewriter-text"></span><label>|</label>
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Brief description of the project.</p>
-                <a href="#">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Brief description of the project.</p>
-                <a href="#">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Brief description of the project.</p>
-                <a href="#">View on GitHub</a>
-            </div>
-        </div>
-    </section>
-    
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <!-- iinfo will go here -->
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <!-- info will go here -->
-    </section>
-
+  <!-- AOS Library Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
