@@ -1,0 +1,62 @@
+/* HOME SECTION */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Move items to the left */
+    gap: 3rem;
+    width: 80%;
+    max-width: 1200px; /* optional max for large screens */
+    margin: 0 auto;    /* center the container in the page */
+  }
+  
+  .main-container .image {
+    width: 350px;    /* bigger image size */
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px var(--neon-blue);
+    transition: transform 0.3s ease;
+  }
+  
+  .main-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .main-container .image:hover {
+    transform: scale(1.05);
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .typewriter {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+  }
+
+  /* PROFILE PICTURE STYLING */
+.main-container .image {
+    width: 350px;    /* bigger image size */
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px var(--neon-blue); /* Neon blue glow effect */
+    transition: transform 0.3s ease;
+  }
+  
+  .main-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .main-container .image:hover {
+    transform: scale(1.05); /* Slight pop-out effect on hover */
+  }
+  
+  
